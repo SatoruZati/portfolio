@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram, FaTwitter, FaEnvelope, FaPhone, FaDiscord } from 'react-icons/fa';
 import gif1 from './assets/gif1.gif';
 
-function Contact() {
+function Contact({ onBackToHome }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
       <img 
@@ -69,6 +69,14 @@ function Contact() {
           <p className="text-gray-300">satoruzati</p>
         </motion.div>
       </div>
+      <motion.button 
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="mt-8 text-base text-white py-2 px-6 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 tracking-wide z-10"
+        onClick={onBackToHome}
+      >
+        Back to Home Page
+      </motion.button>
     </div>
   );
 }
