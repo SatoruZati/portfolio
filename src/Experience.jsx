@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import { FaPen, FaGoogle, FaUsers, FaLink } from "react-icons/fa";
+import { FaPen, FaGoogle, FaUsers, FaLink, FaCode, FaCodeBranch, FaChartLine } from "react-icons/fa";
 import gif4 from "./assets/gif4.gif";
 
 function Experience({ onBackToHome }) {
@@ -11,24 +11,22 @@ function Experience({ onBackToHome }) {
       title: "Web Content Writer",
       company: "TutorialsPoint",
       location: "Remote",
-      period: "2022-2023",
-      icon: <FaPen />,
+      period: "2023 - Present",
+      link: "https://www.tutorialspoint.com/authors/satadru-jati",
       achievements: [
         {
-          text: "Published 50+ technical articles (avg. 1500 words) on DSA & cloud computing with 95% client satisfaction",
-          icon: <FaPen className="text-blue-400" />
+          text: "Created comprehensive technical articles covering various programming topics",
+          icon: <FaCode className="text-blue-400" />
         },
         {
-          text: "Optimized content for SEO, achieving average first-page Google ranking in 3 months",
-          icon: <FaGoogle className="text-blue-400" />
+          text: "Developed high-quality content for multiple programming languages and frameworks",
+          icon: <FaCodeBranch className="text-blue-400" />
         },
         {
-          text: "Collaborated with 10+ subject matter experts to ensure technical accuracy",
-          icon: <FaUsers className="text-blue-400" />
+          text: "Maintained consistent engagement through well-structured and informative content",
+          icon: <FaChartLine className="text-blue-400" />
         }
-      ],
-      link: "tutorialspoint.com/authors/satadru-jati",
-      color: "from-blue-500/20 to-purple-500/20"
+      ]
     }
   ];
 
@@ -37,8 +35,8 @@ function Experience({ onBackToHome }) {
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0">
-          <img 
-            src={gif4} 
+          <img
+            src={gif4}
             alt="Background Animation"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
           />
@@ -60,7 +58,7 @@ function Experience({ onBackToHome }) {
             <MdKeyboardDoubleArrowLeft className="text-xl sm:text-2xl group-hover:-translate-x-1 transition-transform" />
             <span className="text-sm sm:text-base">Back to Home</span>
           </motion.button>
-          <motion.h1 
+          <motion.h1
             className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-gradient order-1 sm:order-2"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,20 +76,25 @@ function Experience({ onBackToHome }) {
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.02 }}
               className="relative group"
+              onClick={() => {
+                const url = 'https://www.tutorialspoint.com/authors/satadru-jati';
+                window.open(url, '_blank');
+              }}
+                    
             >
               {/* Main Card */}
-              <div className="bg-gray-900/40 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-800/50 
-                             group-hover:border-blue-500/50 transition-all duration-300 
+              <div className="bg-gray-900/40 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-800/50
+                             group-hover:border-blue-500/50 transition-all duration-300
                              shadow-lg group-hover:shadow-blue-500/20">
                 {/* Animated Border Gradient */}
-                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10
                               opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
-                
+
                 {/* Card Header */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 sm:mb-6">
                   <div>
-                    <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-transparent 
-                                 group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 
+                    <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-transparent
+                                 group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400
                                  group-hover:to-purple-400 transition-all duration-300">
                       {experience.title}
                     </h2>
@@ -123,16 +126,19 @@ function Experience({ onBackToHome }) {
                 </div>
 
                 {/* Author Link */}
-                <motion.a
-                  href={`https://${experience.link}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 sm:mt-6 inline-flex items-center gap-2 text-sm sm:text-base text-blue-400 hover:text-blue-300 transition-colors group/link"
-                  whileHover={{ x: 5 }}
-                >
-                  <FaLink className="group-hover/link:rotate-45 transition-transform" />
-                  <span>View Author Page</span>
-                </motion.a>
+                <div className="mt-4 sm:mt-6">
+                  <div
+                    className="z-50 px-4 py-2 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 
+                             border border-blue-500/30 hover:border-blue-500/50 
+                             text-blue-400 hover:text-blue-300 
+                             transition-all duration-300 
+                             flex items-center gap-2 group/link cursor-pointer w-fit
+                             hover:scale-105 hover:translate-x-1 active:scale-95"
+                  >
+                    <FaLink className="group-hover/link:rotate-45 transition-transform" />
+                    <span className="font-medium">View Author Page</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -142,4 +148,4 @@ function Experience({ onBackToHome }) {
   );
 }
 
-export default Experience; 
+export default Experience;
