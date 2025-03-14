@@ -7,7 +7,7 @@ import gif2 from "./assets/gif2.gif"
 import { GoSun } from "react-icons/go";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { SiGoogledocs } from "react-icons/si";
-import { FaGithub, FaLinkedin, FaAws, FaPython, FaJava, FaHtml5 ,  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaAws, FaPython, FaJava, FaHtml5, FaCode, FaChartLine, FaCodeBranch } from "react-icons/fa";
 import { SiGooglecloud, SiSalesforce, SiUnrealengine, SiTailwindcss } from "react-icons/si";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
@@ -65,7 +65,7 @@ function App(){
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50"></div>
           </div>
 
-          {/* Nav-Bar */}
+    {/* Nav-Bar */}
           <motion.div 
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -310,11 +310,11 @@ function App(){
                     <span className="text-sm text-blue-400 group-hover:text-blue-300 transition-colors flex items-center gap-2">
                       View Profile <MdKeyboardDoubleArrowRight className="group-hover:translate-x-1 transition-transform"/>
                     </span>
-                  </div>
-                </div>
+      </div>
+      </div>
               </motion.a>
-            </div>
-          </div>
+      </div>
+    </div>
 
           {/* Skills Section */}
           <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-8 bg-black/80 backdrop-blur-sm relative z-10">
@@ -378,6 +378,361 @@ function App(){
             </div>
           </div>
 
+          {/* Education Timeline Section */}
+          <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-8 bg-black/80 backdrop-blur-sm relative z-10">
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/80 to-purple-900/10"></div>
+              <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+            </div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <motion.h2 
+                className="text-3xl sm:text-5xl font-bold text-center mb-16 sm:mb-20 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-gradient tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Education Timeline
+              </motion.h2>
+
+              <div className="relative">
+                {/* Timeline Line */}
+                <div className="absolute left-4 sm:left-1/2 h-full w-[2px] bg-gradient-to-b from-transparent via-blue-500/40 to-transparent transform -translate-x-1/2"></div>
+
+                {/* Timeline Items */}
+                <div className="space-y-24">
+                  {/* AISSE Item */}
+                  <motion.div 
+                    className="relative flex flex-col sm:flex-row items-center sm:even:flex-row-reverse gap-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  >
+                    <div className="w-3 h-3 absolute left-0 sm:left-1/2 top-8 transform -translate-x-1/2 bg-blue-400 rounded-full shadow-[0_0_12px_rgba(96,165,250,0.5)] z-10"></div>
+                    <div className="sm:w-1/2 ml-12 sm:ml-0">
+                      <div className="bg-gray-900/30 backdrop-blur-sm rounded-xl border border-gray-800/30 hover:border-blue-500/30 transition-all duration-500 group overflow-hidden">
+                        <div className="border-b border-gray-700/30 px-4 py-2 flex items-center gap-2 bg-gray-900/50">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                          </div>
+                          <span className="text-sm text-gray-400">secondary.js</span>
+                        </div>
+                        <div className="p-6 font-mono">
+                          <div className="space-y-2">
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">degree</span> <span className="text-white">=</span> <span className="text-emerald-400">"AISSE (Class X)"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">school</span> <span className="text-white">=</span> <span className="text-emerald-400">"Techno India Group Public School"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">location</span> <span className="text-white">=</span> <span className="text-emerald-400">"Chinsurah"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">year</span> <span className="text-white">=</span> <span className="text-emerald-400">"2020"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">score</span> <span className="text-white">=</span> <span className="text-orange-400">96.4</span>;</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* AISSCE Item */}
+                  <motion.div 
+                    className="relative flex flex-col sm:flex-row items-center sm:even:flex-row-reverse gap-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  >
+                    <div className="w-3 h-3 absolute left-0 sm:left-1/2 top-8 transform -translate-x-1/2 bg-purple-400 rounded-full shadow-[0_0_12px_rgba(167,139,250,0.5)] z-10"></div>
+                    <div className="sm:w-1/2 ml-12 sm:ml-0">
+                      <div className="bg-gray-900/30 backdrop-blur-sm rounded-xl border border-gray-800/30 hover:border-purple-500/30 transition-all duration-500 group overflow-hidden">
+                        <div className="border-b border-gray-700/30 px-4 py-2 flex items-center gap-2 bg-gray-900/50">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                          </div>
+                          <span className="text-sm text-gray-400">highSchool.js</span>
+                        </div>
+                        <div className="p-6 font-mono">
+                          <div className="space-y-2">
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">degree</span> <span className="text-white">=</span> <span className="text-emerald-400">"AISSCE (Class XII)"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">school</span> <span className="text-white">=</span> <span className="text-emerald-400">"Techno India Group Public School"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">location</span> <span className="text-white">=</span> <span className="text-emerald-400">"Chinsurah"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">year</span> <span className="text-white">=</span> <span className="text-emerald-400">"2022"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">score</span> <span className="text-white">=</span> <span className="text-orange-400">84.6</span>;</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* BTech Item */}
+                  <motion.div 
+                    className="relative flex flex-col sm:flex-row items-center sm:even:flex-row-reverse gap-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  >
+                    <div className="w-3 h-3 absolute left-0 sm:left-1/2 top-8 transform -translate-x-1/2 bg-blue-400 rounded-full shadow-[0_0_12px_rgba(96,165,250,0.5)] z-10"></div>
+                    <div className="sm:w-1/2 ml-12 sm:ml-0">
+                      <div className="bg-gray-900/30 backdrop-blur-sm rounded-xl border border-gray-800/30 hover:border-blue-500/30 transition-all duration-500 group overflow-hidden">
+                        <div className="border-b border-gray-700/30 px-4 py-2 flex items-center gap-2 bg-gray-900/50">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                          </div>
+                          <span className="text-sm text-gray-400">education.js</span>
+                        </div>
+                        <div className="p-6 font-mono">
+                          <div className="space-y-2">
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">degree</span> <span className="text-white">=</span> <span className="text-emerald-400">"Bachelor of Technology"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">major</span> <span className="text-white">=</span> <span className="text-emerald-400">"Computer Science and Engineering"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">university</span> <span className="text-white">=</span> <span className="text-emerald-400">"University of Engineering & Management, Kolkata"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">duration</span> <span className="text-white">=</span> <span className="text-emerald-400">"2022 - 2026"</span>;</p>
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">gpa</span> <span className="text-white">=</span> <span className="text-orange-400">8.47</span>;</p>
+                            <p className="mt-4"><span className="text-purple-400">const</span> <span className="text-blue-400">coursework</span> <span className="text-white">=</span> <span className="text-white">[</span></p>
+                            <div className="pl-4">
+                              <p><span className="text-emerald-400">"Data Structures & Algorithms"</span><span className="text-white">,</span></p>
+                              <p><span className="text-emerald-400">"Machine Learning & AI"</span><span className="text-white">,</span></p>
+                              <p><span className="text-emerald-400">"Cloud Computing"</span><span className="text-white">,</span></p>
+                              <p><span className="text-emerald-400">"DBMS"</span><span className="text-white">,</span></p>
+                              <p><span className="text-emerald-400">"OOP"</span></p>
+                            </div>
+                            <p><span className="text-white">];</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bento Grid Section */}
+          <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-8 bg-black/80 backdrop-blur-sm relative z-10">
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-black/80 to-purple-900/10"></div>
+              <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+            </div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <motion.h2 
+                className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-gradient tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                GitHub Highlights
+              </motion.h2>
+              
+              {/* Bento Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
+                {/* Large Featured Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="md:col-span-2 bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-6">
+                      <FaGithub className="text-4xl text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+                      <h3 className="text-2xl font-semibold text-white group-hover:text-emerald-200 transition-colors">Featured Repository</h3>
+                    </div>
+                    <div className="space-y-4">
+                      <h4 className="text-xl text-white group-hover:text-emerald-200 transition-colors">Portfolio Website</h4>
+                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">A modern, responsive portfolio built with React and Tailwind CSS, featuring smooth animations and interactive elements.</p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">React</span>
+                        <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Tailwind</span>
+                        <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Framer Motion</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Stats Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <FaChartLine className="text-3xl text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+                      <h3 className="text-xl font-semibold text-white group-hover:text-emerald-200 transition-colors">GitHub Stats</h3>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 100+ Contributions</p>
+                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 15+ Repositories</p>
+                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 5+ Stars Earned</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Code Snippet Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="md:col-span-2 bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <FaCode className="text-3xl text-emerald-400" />
+                      <h3 className="text-xl font-semibold text-white">Featured Code</h3>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-300 overflow-x-auto">
+                        <code>{`// Animation component with Framer Motion
+const AnimatedCard = ({ children }) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring" }}
+    >
+      {children}
+    </motion.div>
+  );
+};`}</code>
+                      </pre>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Recent Activity Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <FaCodeBranch className="text-3xl text-emerald-400" />
+                      <h3 className="text-xl font-semibold text-white">Recent Activity</h3>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-gray-300">• Portfolio Website Update</p>
+                      <p className="text-gray-300">• New Project Contributions</p>
+                      <p className="text-gray-300">• Code Reviews</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Contribution Graph Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="md:col-span-2 bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <FaChartLine className="text-3xl text-emerald-400" />
+                      <h3 className="text-xl font-semibold text-white">Contribution Activity</h3>
+                    </div>
+                    <div className="h-32 bg-gray-800/50 rounded-lg flex items-center justify-center">
+                      <div className="grid grid-cols-7 gap-1">
+                        {[
+                          0, 0, 1, 2, 0, 1, 0,
+                          1, 0, 0, 3, 0, 0, 1,
+                          0, 2, 0, 1, 0, 1, 0,
+                          1, 0, 1, 0, 2, 0, 1,
+                          0, 1, 0, 2, 1, 0, 0
+                        ].map((contributions, i) => (
+                          <div 
+                            key={i}
+                            className={`w-3 h-3 rounded-sm ${
+                              contributions === 0 ? 'bg-emerald-500/10' :
+                              contributions === 1 ? 'bg-emerald-500/30' :
+                              contributions === 2 ? 'bg-emerald-500/50' :
+                              'bg-emerald-500/70'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* GitHub Skills Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-900/40 backdrop-blur-xl rounded-2xl p-6 border border-gray-800/50 
+                           hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20
+                           group overflow-hidden relative"
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                       style={{
+                         background: 'linear-gradient(45deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1), rgba(59,130,246,0.1))'
+                       }}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <FaCode className="text-3xl text-emerald-400" />
+                      <h3 className="text-xl font-semibold text-white">GitHub Skills</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Git Flow</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">CI/CD</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Actions</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Pages</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Projects</span>
+                    </div>
+                  </div>
+                </motion.div>
+        </div>
+      </div>
+    </div>
+
           {/* Experience Section */}
           <div className="min-h-screen py-16 sm:py-20 px-4 sm:px-8 bg-black/80 backdrop-blur-sm relative z-10">
             <div className="absolute inset-0 z-0">
@@ -433,7 +788,7 @@ function App(){
             </motion.div>
           </div>
 
-          {/* Footer */}
+    {/* Footer */}
           <footer className="py-6 sm:py-8 px-4 sm:px-8 border-t border-gray-800 relative z-10 bg-black/90">
             <div className="max-w-7xl mx-auto text-center text-gray-400">
               <p className="mb-2 tracking-wide text-sm sm:text-base">
