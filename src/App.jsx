@@ -15,6 +15,7 @@ import Contact from './Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Experience from './Experience';
 import About from './About';
+import GitHubCalendar from 'react-github-calendar';
 
 function App(){
   const containerRef = useRef(null);
@@ -135,7 +136,7 @@ function App(){
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-sm sm:text-base text-white py-2 px-4 sm:px-6 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 tracking-wide"
+                  className="text-sm sm:text-base text-white py-2 px-4 sm:px-6 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
                   onClick={() => setShowContact(true)}
                 >
                   Get in Touch
@@ -551,7 +552,7 @@ function App(){
                     </div>
                     <div className="space-y-4">
                       <h4 className="text-xl text-white group-hover:text-emerald-200 transition-colors">Portfolio Website</h4>
-                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">A modern, responsive portfolio built with React and Tailwind CSS, featuring smooth animations and interactive elements.</p>
+                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">My modern, responsive portfolio built with React and Tailwind CSS, featuring smooth animations and interactive elements.</p>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">React</span>
                         <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Tailwind</span>
@@ -578,13 +579,22 @@ function App(){
                   />
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-4">
-                      <FaChartLine className="text-3xl text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+                      <FaChartLine className="text-3xl text-emerald-400" />
                       <h3 className="text-xl font-semibold text-white group-hover:text-emerald-200 transition-colors">GitHub Stats</h3>
                     </div>
+                    <div className="mt-4 flex justify-center">
+                      <GitHubCalendar
+                        username="SatoruZati"
+                        colorScheme="dark"
+                        fontSize={12}
+                        blockSize={12}
+                        blockMargin={4}
+                      />
+                    </div>
                     <div className="space-y-2">
-                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 100+ Contributions</p>
-                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 15+ Repositories</p>
-                      <p className="text-gray-300 group-hover:text-emerald-100/80 transition-colors">• 5+ Stars Earned</p>
+                      <p className="text-gray-300">• 100+ Contributions</p>
+                      <p className="text-gray-300">• 15+ Repositories</p>
+                      <p className="text-gray-300">• 5+ Stars Earned</p>
                     </div>
                   </div>
                 </motion.div>
@@ -607,23 +617,50 @@ function App(){
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-4">
                       <FaCode className="text-3xl text-emerald-400" />
-                      <h3 className="text-xl font-semibold text-white">Featured Code</h3>
+                      <h3 className="text-xl font-semibold text-white">Featured ML Code</h3>
                     </div>
-                    <div className="bg-gray-800/50 rounded-lg p-4">
-                      <pre className="text-sm text-gray-300 overflow-x-auto">
-                        <code>{`// Animation component with Framer Motion
-const AnimatedCard = ({ children }) => {
-  return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring" }}
-    >
-      {children}
-    </motion.div>
-  );
-};`}</code>
-                      </pre>
+                    <div className="bg-gray-800/50 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+                      <pre className="whitespace-pre text-blue-300">
+import <span className="text-emerald-300">numpy as np</span><br/> 
+import <span className="text-emerald-300">pandas as pd</span><br/>
+import <span className="text-emerald-300">matplotlib.pyplot as plt</span><br/>
+from <span className="text-emerald-300">sklearn.model_selection</span> import train_test_split<br/>
+from <span className="text-emerald-300">sklearn.ensemble</span> import RandomForestClassifier<br/>
+from <span className="text-emerald-300">sklearn.metrics</span> import accuracy_score, confusion_matrix<br/>
+<br/>
+<span className="text-gray-400"># Load and preprocess the dataset</span><br/>
+def prepare_data(dataset_path):
+    <span className="text-gray-400">  # Read and clean data</span><br/>
+    data = pd.read_csv(dataset_path)<br/>
+    data = data.dropna()<br/>
+    <br/>
+    <span className="text-gray-400"># Feature engineering</span><br/>
+    features = [<span className="text-orange-300">'feature1'</span>, <span className="text-orange-300">'feature2'</span>, <span className="text-orange-300">'feature3'</span>]
+    X = data[features].values<br/>
+    y = data[<span className="text-orange-300">'target'</span>].values<br/>
+    <br/>
+    <span className="text-gray-400"># Split dataset</span><br/>
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, 
+        test_size=<span className="text-purple-300">0.2</span>, 
+        random_state=<span className="text-purple-300">42</span>
+    )<br/>
+    <br/>
+    return X_train, X_test, y_train, y_test
+
+<span className="text-gray-400">  # Train and evaluate model</span><br/>
+def train_model(X_train, y_train):
+    <span className="text-gray-400">  # Initialize model with hyperparameters</span><br/>
+    rf_model = RandomForestClassifier(
+        n_estimators=<span className="text-purple-300">100</span>,
+        max_depth=<span className="text-purple-300">10</span>,
+        min_samples_split=<span className="text-purple-300">5</span>,
+        random_state=<span className="text-purple-300">42</span>
+    )<br/>
+    <br/>
+    <span className="text-gray-400"># Fit the model</span><br/>
+    rf_model.fit(X_train, y_train)<br/>
+    return rf_model</pre>
                     </div>
                   </div>
                 </motion.div>
@@ -674,28 +711,19 @@ const AnimatedCard = ({ children }) => {
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-4">
                       <FaChartLine className="text-3xl text-emerald-400" />
-                      <h3 className="text-xl font-semibold text-white">Contribution Activity</h3>
+                      <h3 className="text-xl font-semibold text-white">Join Me</h3>
                     </div>
-                    <div className="h-32 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                      <div className="grid grid-cols-7 gap-1">
-                        {[
-                          0, 0, 1, 2, 0, 1, 0,
-                          1, 0, 0, 3, 0, 0, 1,
-                          0, 2, 0, 1, 0, 1, 0,
-                          1, 0, 1, 0, 2, 0, 1,
-                          0, 1, 0, 2, 1, 0, 0
-                        ].map((contributions, i) => (
-                          <div 
-                            key={i}
-                            className={`w-3 h-3 rounded-sm ${
-                              contributions === 0 ? 'bg-emerald-500/10' :
-                              contributions === 1 ? 'bg-emerald-500/30' :
-                              contributions === 2 ? 'bg-emerald-500/50' :
-                              'bg-emerald-500/70'
-                            }`}
-                          />
-                        ))}
-                      </div>
+                    <div className="h-32 bg-gray-800/50 rounded-lg flex flex-col items-center justify-center p-4">
+                      <a href="https://github.com/SatoruZati" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="flex items-center gap-3 hover:bg-gray-700/50 p-3 rounded-lg transition-all duration-300 w-full">
+                        <FaGithub className="text-3xl text-emerald-400" />
+                        <div className="flex flex-col">
+                          <span className="text-white font-medium">@SatoruZati</span>
+                          <span className="text-gray-400 text-sm">View GitHub Profile</span>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -718,14 +746,14 @@ const AnimatedCard = ({ children }) => {
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-4">
                       <FaCode className="text-3xl text-emerald-400" />
-                      <h3 className="text-xl font-semibold text-white">GitHub Skills</h3>
+                      <h3 className="text-xl font-semibold text-white">Skills</h3>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Git Flow</span>
-                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">CI/CD</span>
-                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Actions</span>
-                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Pages</span>
-                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Projects</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Machine Learning</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Cloud Computing</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Game Development</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Python Programming</span>
+                      <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 group-hover:text-emerald-300 rounded-full text-sm transition-colors">Vibe Coding Web Development</span>
                     </div>
                   </div>
                 </motion.div>
@@ -806,7 +834,7 @@ const AnimatedCard = ({ children }) => {
                   <span className="text-purple-400 hover:text-purple-300">i</span>
                 </span>
               </p>
-              <p className="text-xs sm:text-sm tracking-wide">© 2024 All rights reserved</p>
+              <p className="text-xs sm:text-sm tracking-wide">© 2025 All Rights Reserved</p>
             </div>
           </footer>
         </>

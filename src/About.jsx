@@ -159,7 +159,7 @@ function About({ onBackToHome }) {
           className="mt-6 sm:mt-8 flex justify-center gap-6"
         >
           <motion.a
-            href="https://instagram.com"
+            href="https://www.instagram.com/shit.satadru/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -168,7 +168,7 @@ function About({ onBackToHome }) {
             <FaInstagram />
           </motion.a>
           <motion.a
-            href="mailto:your.email@example.com"
+            href="mailto:satadrujati3317@gmail.com"
             whileHover={{ scale: 1.1 }}
             className="text-xl sm:text-2xl text-gray-400 hover:text-blue-500 transition-colors"
           >

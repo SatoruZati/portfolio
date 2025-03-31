@@ -26,7 +26,7 @@ function Contact({ onBackToHome }) {
         >
           <FaEnvelope className="text-3xl text-blue-400 mb-4" />
           <h2 className="text-xl font-semibold mb-2">Email</h2>
-          <p className="text-gray-300">satadrujati257@gmail.com</p>
+          <a href="mailto:satadrujati3317@gmail.com" className="text-gray-300">satadrujati3317@gmail.com</a>
         </motion.div>
         <motion.div 
           className="bg-gray-800/50 p-6 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
