@@ -15,9 +15,9 @@
 - 🔥 Modern 3D animations 
 - 📱 Responsive & mobile-first design
 - 🌈 Interactive UI elements
-- 📦 Project showcase with dynamic filtering
-- 📬 Smooth contact form integration
-- 🎨 Custom theme system
+- 📦 GitHub and other professional handles
+- 📬 Multiple contact handles integration
+- 🎨 Dark theme system
 
 ## 🛠 Tech Stack
 
