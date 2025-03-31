@@ -1,11 +1,11 @@
 # 🌟 Satoru Zati Portfolio 
 
-[![Portfolio Banner](https://via.placeholder.com/1280x640/2d2d2d/ffffff?text=Satoru+Zati+Portfolio+Showcase)](https://satoruzati.netlify.app/)
+[![Portfolio Banner](https://raw.githubusercontent.com/SatoruZati/portfolio/b453e8ff12278e68d82d9920908627a605ca444b/Yellow%20and%20Cream%20Modern%20Model%20Portfolio%20Presentation.png)](https://satoruzati.netlify.app/)
 
 <div align="center">
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-000?style=for-the-badge&logo=vercel&logoColor=white)](https://satoruzati.netlify.app/)
-[![GitHub](https://img.shields.io/badge/-VIEW_CODE-181717?style=for-the-badge&logo=github)](https://github.com/yourusername/your-repo)
+[![GitHub](https://img.shields.io/badge/-VIEW_CODE-181717?style=for-the-badge&logo=github)](https://github.com/SatoruZati/portfolio)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 </div>
