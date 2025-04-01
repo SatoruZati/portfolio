@@ -15,6 +15,8 @@ import Contact from './Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Experience from './Experience';
 import About from './About';
+import HomeContactForm from './HomeContactForm'; // Import the new form component
+import YouTubePlayer from './YouTubePlayer'; // Import the YouTube player component
 import GitHubCalendar from 'react-github-calendar';
 
 function App(){
@@ -791,9 +793,12 @@ def train_model(X_train, y_train):
             </div>
           </div>
 
+          {/* YouTube Player Section */}
+          <YouTubePlayer />
+
           {/* Interactive Spacer */}
           <div className="relative h-40 overflow-hidden">
-            <motion.div 
+            <motion.div
               className="absolute inset-0"
               initial={{ opacity: 0.3 }}
               whileHover={{ opacity: 0.6 }}
@@ -815,6 +820,9 @@ def train_model(X_train, y_train):
               />
             </motion.div>
           </div>
+
+          {/* Contact Form Section */}
+          <HomeContactForm />
 
     {/* Footer */}
           <footer className="py-6 sm:py-8 px-4 sm:px-8 border-t border-gray-800 relative z-10 bg-black/90">
